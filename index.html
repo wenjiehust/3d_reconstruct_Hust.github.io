@@ -28,6 +28,21 @@
 <h1>
 <a id="工作进展" class="anchor" href="#%E5%B7%A5%E4%BD%9C%E8%BF%9B%E5%B1%95" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>工作进展</h1>
 
+<p>更新时间：2016年6月13日<br>
+参照<a href="http://ccwu.me/vsfm/">Wuchangchang</a>的想法，上周做了一下GPU版本
+的<a href="http://www.cs.unc.edu/~ccwu/siftgpu/">SIFTGPU</a>的相关代码的调试和运行，并得到了一些结果。这周继续上周的工作，
+首先看了<a href="http://grail.cs.washington.edu/projects/mcba/">Multicore Bundle Adjustment</a>相关的文章，了解了多核Bundle Adjustment
+的基本算法流程，然后把<a href="http://ccwu.me/vsfm/">VisualSFM</a>在Windows下运行了一下，得到了一些实验结果如下所示，第一幅是初始加载
+多幅图片之后的界面结果；第二幅是进行SIFT特征点提取并多核快速匹配之后其中某两幅图片的匹配点连线结果；第三幅是进行多核BA之后，重建得到
+的稀疏三维点云和相机姿态；第四幅是进行CMVS稠密扩展之后的稠密三维点云。
+</p>
+<p><img src="https://raw.githubusercontent.com/wenjiehust/hahahah.github.io/master/vsfm初始.jpg" alt="https://raw.githubusercontent.com/wenjiehust/hahahah.github.io/master/vsfm初始.jpg">
+<img src="https://raw.githubusercontent.com/wenjiehust/hahahah.github.io/master/vsfmsiftmatch2.jpg" alt="https://raw.githubusercontent.com/wenjiehust/hahahah.github.io/master/vsfmsiftmatch2.jpg">
+<img src="https://raw.githubusercontent.com/wenjiehust/hahahah.github.io/master/vsfmbundler.jpg" alt="https://raw.githubusercontent.com/wenjiehust/hahahah.github.io/master/vsfmbundler.jpg">
+<img src="https://raw.githubusercontent.com/wenjiehust/hahahah.github.io/master/vsfmcmvs.jpg" alt="https://raw.githubusercontent.com/wenjiehust/hahahah.github.io/master/vsfmcmvs.jpg">
+
+</p>
+
 <p>更新时间：2016年6月6日<br>
 经过一段时间的文献阅读和资料检索整理，我们参照<a href="http://ccwu.me/vsfm/">Wuchangchang</a>的想法，看了其中一系列的文章，首先着手做了一下GPU版本
 的<a href="http://www.cs.unc.edu/~ccwu/siftgpu/">SIFTGPU</a>的相关代码的调试和运行，对SIFT有了一定的认识和理解。下面是代码调试的结果图,第一幅图是
